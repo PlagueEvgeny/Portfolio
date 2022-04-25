@@ -1,0 +1,20 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="hello">
+{% for hello in object_list %}
+    <div></div>
+    <div>
+        <div><h1 class="hello_title">{{hello.title}}</h1></div>
+        <div><p class="hello_desc">{{hello.desc}}</p></div>
+    </div>
+    <div>
+        <div class="div_cover_hello">
+            <img src="{{ hello.cover_hello.url }}" alt="" class="cover_hello">
+        </div>
+    </div>
+    <div></div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="tools">
+    <div></div>
+    <div>
+        <h1 class="tools_title">Tools Evgeny uses</h1>
+    </div>
+    <div></div>
+    <div></div>
+</div>
+<div class="tools_use_cont">
+    <div></div>
+    <div class="tools_use">
+        {% for item in object_list %}
+            <div>
+                <h2 class="tools_h">{{item.name}}</h2>
+                    {% for use in item.tools.all %}
+                        <p class="tools_p"><img src="{{use.icon.url}}" alt="" class="tools_p_img"> {{use.text}} </p>
+                    {% endfor %}
+            </div>
+            <div></div>
+        {% endfor %}
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}

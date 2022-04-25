@@ -1,0 +1,72 @@
+.about_title_div{
+    display: grid;
+    grid-template-columns: 10.89% 89.11%;
+}
+
+.about_title{
+    font-size: 50px;
+    color: #a4fab5;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 10.89% 38.22% 30% 10.89%;
+}
+.about_desc{
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.skils{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 10.89% 26.073% 26.08% 26.073% 10.89%;
+}
+
+.facts{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 10.89% 40.22% 28% 10.89%;
+}
+.facts_img{
+    max-height: 400px;
+}
+.facts_ul{
+    line-height: 40px;
+    padding-left: 70px;
+}
+.facts_h{
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 30px 10px;
+}
+.designer, .coder{
+    margin-top: 10px;
+    list-style-type: none;
+    line-height: 35px;
+}
+.skils_item2{
+    justify-self: left;
+}
+.skils_item3{
+    justify-self: center;
+}
+.skils_item4{
+    justify-self: right;
+}
+
+.my{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 10.89% 26.073% 26.08% 26.073% 10.89%;
+}
+.my_ul{
+    margin-top: 20px;
+    list-style-type: none;
+    line-height: 40px;
+}
+.my_img{
+    max-width: 400px;
+    border-radius: 10px;
+}

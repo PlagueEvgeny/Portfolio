@@ -1,0 +1,27 @@
+.tools{
+    display: grid;
+    grid-template-columns: 10.89% 38.22% 30% 10.89%;
+}
+.tools_title{
+    font-size: 50px;
+    color: #a4fab5;
+}
+.tools_use_cont{
+    display: grid;
+    grid-template-columns: 10.89% 68.22% 10.89%;
+}
+.tools_use{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.tools_h{
+    margin: 30px 0;
+}
+.tools_p{
+    padding-right: 30px;
+    line-height: 40px;
+}
+.tools_p_img{
+    height: 20px;
+    vertical-align: middle;
+}

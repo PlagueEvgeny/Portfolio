@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="" type="image/png">
+    <title>{{ page_title|default:"Pl.Engineer"|capfirst }}</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static  'css/base.css'%}">
+    <link rel="stylesheet" href="{% static  'css/hello.css'%}">
+    <link rel="stylesheet" href="{% static  'css/about.css'%}">
+    <link rel="stylesheet" href="{% static  'css/portfolio.css'%}">
+    <link rel="stylesheet" href="{% static  'css/certificate.css'%}">
+    <link rel="stylesheet" href="{% static  'css/tools.css'%}">
+	<link rel="stylesheet" href="{% static  'css/blog.css' %}">
+    {% endblock %}
+    {% block js %}
+    <script src="../../../static/js/scroll_top.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <div></div>
+            <div><a href="{% url 'main:hello' %}"><img src="{%static 'img/logo/logo.png'%}" alt="Logo" class="logo"></a></div>
+            <div></div>
+        </div>
+        <div class="header_link">
+            <div></div>
+			<div><a href="{% url 'blog:index' %}" class="header_link_item">Blog</a></div>
+            <div><a href="{% url 'main:portfolio' %}" class="header_link_item">Portfolio</a></div>
+            <div><a href="{% url 'main:about' %}" class="header_link_item">About</a></div>
+            <div></div>
+        </div>
+        <div class="header_icons">
+            <div></div>
+            <div><a href=""><img src="{%static 'img/logo/github.png'%}" class="icons_soc"></a></div>
+            <div><a href=""><img src="{%static 'img/logo/twitter.png'%}" class="icons_soc"></a></div>
+            <div><a href=""><img src="{%static 'img/logo/vk.png'%}" class="icons_soc"></a></div>
+            <div></div>
+        </div>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock %}
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    </div>
+    <footer class="footer">
+        <div></div>
+        <div>© 2022 Pl.Engineer.</div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+</body>
+</html>

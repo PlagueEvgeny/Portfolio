@@ -1,0 +1,39 @@
+{% extends "mainapp/base.html" %} 
+{% block content %}
+{% load static %}
+<div class="blog">
+    <div></div>
+    <div style="margin-right: 40px;">
+        <div class="search_div">
+			<form method="get">
+				<input value="" placeholder="Search" class="textfield" name="search">
+			</form>
+		</div>
+    </div>
+    <div>
+        <ul class="blog_ul">
+            {% for post in object_list %}
+            <a href="{% url 'blog:post' post.pk %}" class="link_blog">
+                <div class="div_post_icon">
+                    <img src="{{post.icon.url}}" class="post_icon">
+                </div>
+                <div class="div_post">
+                    <h4>{{post.title}}</h4>
+                    <div><time>{{post.created_at}}</time></div>
+                </div>
+            </a>
+            {% endfor %}
+        </ul>
+		<div class="pagination">
+			{% if page_obj.has_previous %}
+				<a href="?page={{ page_obj.previous_page_number}}">Previous</a>
+			{% endif %}
+				<span>Page {{ page_obj.number }} of {{page_obj.paginator.num_pages }}</span>
+			{% if page_obj.has_next %}
+				<a href="?page={{ page_obj.next_page_number }}">Next</a>
+			{% endif %}
+		</div>
+    </div>
+    <div></div>
+</div>
+{% endblock %}

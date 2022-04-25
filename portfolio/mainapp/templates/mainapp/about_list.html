@@ -1,0 +1,78 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="about_title_div">
+    <div></div>
+    <div><h1 class="about_title">About</h1></div>
+</div>
+<div class="about">
+{% for about in object_list %}
+    <div></div>
+    <div><p class="about_desc">{{ about.desc }}</p></div>
+    <div></div>
+    <div></div>
+{% endfor %}
+</div>
+<div class="skils">
+    <div></div>
+    <div class="skils_item2">
+        <h2>Part designer</h2>
+        <ul class="designer">
+            <li>UI design</li>
+            <li>UX design</li>
+            <li>3d modeling </li>
+            <li>HTML/CSS</li>
+        </ul>
+    </div>
+    <div class="skils_item3"><img src="{%static 'img/about/g55844.png'%}" class=""></div>
+    <div class="skils_item4">
+        <h2>Part coder</h2>
+        <ul class="coder">
+            <li>Django</li>
+            <li>Docker</li>
+            <li>Python</li>
+            <li>Bash</li>
+        </ul>
+    </div>
+    <div></div>
+</div>
+<div class="facts">
+    <div></div>
+    <div>
+        <img src="{%static 'img/about/pingvin.png'%}" class="facts_img">
+    </div>
+    <div>
+        <h1 class="facts_h">Other things I'm into</h1>
+        <ul class="facts_ul">
+            {% for about in object_list %}
+                {% for fact in about.facts.all %}
+                <li>{{ fact.random }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div></div>
+</div>
+<div class="my">
+    <div></div>
+    <div>
+        <h2>
+            A little more about me 
+        </h2>
+        <ul class="my_ul">
+            <li><a href="{% url 'main:tools' %}">My tools uses</a></li>
+            <li><a href="{% url 'main:certificate' %}">My certificate</a></li>
+            <li><a href="{% url 'main:portfolio' %}">My project</a></li>
+            <li><a href="https://github.com/PlagueEvgeny/">My github</a></li>
+        </ul>
+    </div>
+    <div></div>
+    <div>
+        <img src="{%static 'img/about/image848.png'%}" class="my_img">
+    </div>
+    <div></div>
+
+</div>
+
+{% endblock %}
